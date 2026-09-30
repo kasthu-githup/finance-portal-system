@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finance Portal - Create Account</title>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="signup-page">
+
+        <!-- LEFT SIDE -->
+        <div class="signup-info">
+
+            <div class="brand">
+                <span class="brand-icon">♜</span>
+                <span>azia finance</span>
+            </div>
+
+            <div class="info-content">
+
+                <h1>
+                    Start Managing Your Finances
+                </h1>
+
+                <p>
+                    Create your finance portal account and manage
+                    income, expenses, customers, invoices and
+                    payments from one place.
+                </p>
+
+                <div class="feature-list">
+
+                    <div>
+                        <span>✓</span>
+                        <p>Centralized finance management</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Real-time dashboard insights</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Customer and invoice tracking</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Secure account authentication</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="signup-container">
+
+            <div class="signup-card">
+
+                <div class="mobile-brand">
+                    <span class="brand-icon">♜</span>
+                    <span>azia finance</span>
+                </div>
+
+                <h2>Create Account</h2>
+
+                <p class="signup-subtitle">
+                    Create your account to start using the finance portal.
+                </p>
+
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the account registration terms.
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        id="signupBtn"
+                        class="signup-btn"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="message"
+                    class="message"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- DIVIDER -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <!-- GOOGLE SIGN IN -->
+                <button
+                    type="button"
+                    id="googleBtn"
+                    class="google-btn"
+                >
+                    <span class="google-icon">G</span>
+                    Continue with Google
+                </button>
+
+
+                <!-- LOGIN -->
+                <p class="login-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Sign In
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Firebase / Signup JavaScript -->
+    <!-- IMPORTANT: signup.js contains ES module imports -->
+    <script
+        type="module"
+        src="./signup.js"
+    ></script>
+
+</body>
+
+</html>

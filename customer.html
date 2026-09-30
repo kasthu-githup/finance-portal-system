@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Management</title>
+
+    <link rel="stylesheet" href="customer.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="page-header">
+
+            <div class="header-content">
+                <span class="page-icon">👥</span>
+
+                <div>
+                    <h1>Customer Management</h1>
+                    <p>Add and manage your customer records.</p>
+                </div>
+            </div>
+
+            <a href="index.html" class="dashboard-btn">
+                ← Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- ADD CUSTOMER CARD -->
+        <section class="card">
+
+            <div class="card-heading">
+                <div>
+                    <h2>Add Customer</h2>
+                    <p>Create a new customer record.</p>
+                </div>
+            </div>
+
+
+            <form id="customerForm">
+
+                <div class="form-grid">
+
+                    <!-- NAME -->
+                    <div class="form-group">
+                        <label for="name">
+                            Customer Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter customer name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="customer@example.com"
+                            autocomplete="email"
+                        >
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                            autocomplete="tel"
+                        >
+                    </div>
+
+
+                    <!-- ADDRESS -->
+                    <div class="form-group full">
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="4"
+                            placeholder="Enter customer address"
+                        ></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        id="addCustomerBtn"
+                        class="primary-btn"
+                    >
+                        <span>＋</span>
+                        Add Customer
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clearBtn"
+                        class="secondary-btn"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- MESSAGE -->
+            <div
+                id="message"
+                class="message"
+                role="alert"
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+
+
+        <!-- CUSTOMER RECORDS -->
+        <section class="card">
+
+            <div class="list-header">
+
+                <div>
+                    <h2>Customer Records</h2>
+
+                    <p>
+                        All customer records from PostgreSQL database.
+                    </p>
+                </div>
+
+
+                <div class="total-box">
+
+                    <span>Total Customers</span>
+
+                    <strong id="totalCustomers">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search customers by name, email or phone..."
+                >
+
+            </div>
+
+
+            <!-- TABLE -->
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="customerTableBody">
+
+                        <!-- Customers inserted using JavaScript -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div
+                id="emptyState"
+                class="empty-state"
+                style="display: none;"
+            >
+                <div class="empty-icon">👥</div>
+
+                <h3>No customers found</h3>
+
+                <p>
+                    Add a customer or change your search.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="customer.js"></script>
+
+</body>
+
+</html>

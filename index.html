@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Azia Finance Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <span class="logo-icon">♜</span>
+            <span>azia</span>
+        </div>
+
+        <div class="collapse"></div>
+
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <a href="index.html" class="menu-item active-link">
+                ▣ <span>Dashboard</span>
+            </a>
+
+            <a href="income.html" class="menu-item">
+                💰 <span>Income</span>
+            </a>
+
+            <a href="expense.html" class="menu-item">
+                💸 <span>Expenses</span>
+            </a>
+
+            <a href="customer.html" class="menu-item">
+                👥 <span>Customers</span>
+            </a>
+
+            <a href="invoice.html" class="menu-item">
+                🧾 <span>Invoices</span>
+            </a>
+
+            <a href="payment.html" class="menu-item">
+                💳 <span>Payments</span>
+            </a>
+
+            <a href="reports.html" class="menu-item">
+                📊 <span>Reports</span>
+            </a>
+
+            <a href="settings.html" class="menu-item">
+                ⚙️ <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <!-- USER PROFILE -->
+        <div class="profile-small user-profile">
+
+            <div class="avatar user-avatar">
+                👤
+            </div>
+
+            <div class="user-details">
+
+                <strong id="userName">
+                    User
+                </strong>
+
+                <small id="userRole">
+                    Admin
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="search">
+
+                <input
+                    type="text"
+                    placeholder="Search for anything..."
+                >
+
+                <span>⌕</span>
+
+            </div>
+
+
+            <div class="top-icons">
+
+                <span>▱</span>
+
+                <span class="notification">
+                    ♧
+                </span>
+
+                <div class="avatar">
+                    👤
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+        <section class="content">
+
+
+            <!-- WELCOME -->
+            <div class="welcome">
+
+                <h1>
+                    Hi, welcome back!
+                </h1>
+
+                <p>
+                    Your finance performance and monitoring dashboard.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TOP CARDS
+            ================================================== -->
+            <div class="top-grid">
+
+
+                <!-- NET PROFIT -->
+                <div class="card profit-card">
+
+                    <h3>
+                        NET PROFIT
+                    </h3>
+
+                    <p>
+                        Your total income minus total expenses.
+                    </p>
+
+                    <div class="circle purple">
+
+                        <strong id="netProfit">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOTAL PAYMENTS -->
+                <div class="card profit-card">
+
+                    <h3>
+                        TOTAL PAYMENTS
+                    </h3>
+
+                    <p>
+                        Total payments received from invoices.
+                    </p>
+
+                    <div class="circle blue">
+
+                        <strong id="totalPayments">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BALANCE -->
+                <div class="card balance-card">
+
+                    <div class="balance-header">
+
+                        <div>
+
+                            <label>
+                                YOUR BALANCE
+                            </label>
+
+                            <h2>
+                                ₹<span id="balanceAmount">0</span>
+                            </h2>
+
+                        </div>
+
+                        <div class="visa">
+                            VISA
+                        </div>
+
+                    </div>
+
+
+                    <div class="wave"></div>
+
+
+                    <label>
+                        YOUR ACCOUNT NUMBER
+                    </label>
+
+
+                    <div class="account-number">
+
+                        •••• &nbsp;&nbsp;&nbsp;
+                        •••• &nbsp;&nbsp;&nbsp;
+                        •••• &nbsp;&nbsp;&nbsp;
+
+                        <b>
+                            5637
+                        </b>
+
+                    </div>
+
+
+                    <div class="account-info">
+
+
+                        <div>
+
+                            <label>
+                                ACCOUNT HOLDER
+                            </label>
+
+                            <p id="accountHolder">
+                                Finance Admin
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                ACCOUNT TYPE
+                            </label>
+
+                            <p>
+                                Business
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECOND SECTION
+            ================================================== -->
+            <div class="dashboard-grid">
+
+
+                <!-- PROFIT + PAYMENT STATUS -->
+                <div class="card ratio-card">
+
+
+                    <!-- PROFIT STATUS -->
+                    <div class="ratio-row">
+
+                        <div class="ratio-icon">
+                            〽
+                        </div>
+
+
+                        <div class="ratio-content">
+
+                            <h3>
+                                PROFIT STATUS
+                            </h3>
+
+                            <strong id="profitStatus">
+                                Calculating...
+                            </strong>
+
+
+                            <div class="progress">
+
+                                <div
+                                    id="profitProgress"
+                                    style="width:0%"
+                                ></div>
+
+                            </div>
+
+
+                            <small>
+                                Based on current income and expenses
+                            </small>
+
+
+                            <p>
+                                Net profit is calculated as total income
+                                minus total expenses.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PAYMENT STATUS -->
+                    <div class="ratio-row">
+
+                        <div class="ratio-icon">
+                            ⌂
+                        </div>
+
+
+                        <div class="ratio-content">
+
+                            <h3>
+                                PAYMENT STATUS
+                            </h3>
+
+                            <strong id="paymentStatus">
+                                Pending
+                            </strong>
+
+
+                            <div class="progress green">
+
+                                <div
+                                    id="paymentProgress"
+                                    style="width:0%"
+                                ></div>
+
+                            </div>
+
+
+                            <small>
+                                Based on payment records
+                            </small>
+
+
+                            <p>
+                                Track total payments received
+                                from your invoice records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STAT CARDS
+                ================================================== -->
+                <div class="stats-grid">
+
+
+                    <!-- TOTAL INCOME -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            TOTAL INCOME
+                        </h3>
+
+                        <div class="stat-icon purple-icon">
+                            ▥
+                        </div>
+
+                        <strong id="totalIncome">
+                            ₹0
+                        </strong>
+
+                        <small class="up">
+                            Current total income
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- TOTAL EXPENSE -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            TOTAL EXPENSES
+                        </h3>
+
+                        <div class="stat-icon blue-icon">
+                            ▥
+                        </div>
+
+                        <strong id="totalExpense">
+                            ₹0
+                        </strong>
+
+                        <small class="down">
+                            Current total expenses
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- TOTAL CUSTOMERS -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            TOTAL CUSTOMERS
+                        </h3>
+
+                        <div class="stat-icon cyan-icon">
+                            ▥
+                        </div>
+
+                        <strong id="totalCustomers">
+                            0
+                        </strong>
+
+                        <small class="up">
+                            Registered customers
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- TOTAL INVOICES -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            TOTAL INVOICES
+                        </h3>
+
+                        <div class="stat-icon pink-icon">
+                            ▥
+                        </div>
+
+                        <strong id="totalInvoices">
+                            0
+                        </strong>
+
+                        <small class="up">
+                            Created invoices
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EXTRA SUMMARY
+            ================================================== -->
+            <div class="dashboard-grid">
+
+
+                <!-- FINANCIAL SUMMARY -->
+                <div class="card ratio-card">
+
+                    <div class="ratio-row">
+
+                        <div class="ratio-icon">
+                            ₹
+                        </div>
+
+
+                        <div class="ratio-content">
+
+                            <h3>
+                                FINANCIAL SUMMARY
+                            </h3>
+
+                            <strong id="summaryText">
+                                Loading...
+                            </strong>
+
+                            <p>
+                                Your dashboard is connected to the
+                                PostgreSQL database and displays the
+                                latest finance records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK INFO -->
+                <div class="stats-grid">
+
+
+                    <!-- NET PROFIT -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            NET PROFIT
+                        </h3>
+
+                        <strong id="netProfitCard">
+                            ₹0
+                        </strong>
+
+                        <small class="up">
+                            Income − Expenses
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- TOTAL PAYMENTS -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            TOTAL PAYMENTS
+                        </h3>
+
+                        <strong id="paymentsCard">
+                            ₹0
+                        </strong>
+
+                        <small class="up">
+                            Payments received
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- DATABASE -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            DATABASE STATUS
+                        </h3>
+
+                        <strong>
+                            ONLINE
+                        </strong>
+
+                        <small class="up">
+                            PostgreSQL connected
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PORTAL -->
+                    <div class="card stat-card">
+
+                        <h3>
+                            PORTAL STATUS
+                        </h3>
+
+                        <strong>
+                            ACTIVE
+                        </strong>
+
+                        <small class="up">
+                            Finance portal running
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="auth.js"></script>
+<script src="auth-ui.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

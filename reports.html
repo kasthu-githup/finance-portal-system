@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finance Reports</title>
+
+    <link rel="stylesheet" href="reports.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="page-header">
+
+        <div>
+            <span class="page-icon">📊</span>
+            <h1>Finance Reports</h1>
+            <p>View your overall financial performance.</p>
+        </div>
+
+        <a href="index.html" class="dashboard-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <section class="report-grid">
+
+        <div class="report-card">
+            <span>Total Income</span>
+            <strong id="totalIncome">₹0</strong>
+        </div>
+
+        <div class="report-card">
+            <span>Total Expenses</span>
+            <strong id="totalExpense">₹0</strong>
+        </div>
+
+        <div class="report-card">
+            <span>Net Profit</span>
+            <strong id="netProfit">₹0</strong>
+        </div>
+
+        <div class="report-card">
+            <span>Total Payments</span>
+            <strong id="totalPayments">₹0</strong>
+        </div>
+
+        <div class="report-card">
+            <span>Total Customers</span>
+            <strong id="totalCustomers">0</strong>
+        </div>
+
+        <div class="report-card">
+            <span>Total Invoices</span>
+            <strong id="totalInvoices">0</strong>
+        </div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Financial Summary</h2>
+
+        <div class="summary-row">
+            <span>Total Income</span>
+            <strong id="summaryIncome">₹0</strong>
+        </div>
+
+        <div class="summary-row">
+            <span>Total Expenses</span>
+            <strong id="summaryExpense">₹0</strong>
+        </div>
+
+        <div class="summary-row highlight">
+            <span>Net Profit</span>
+            <strong id="summaryProfit">₹0</strong>
+        </div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>System Summary</h2>
+
+        <div class="summary-row">
+            <span>Customers</span>
+            <strong id="summaryCustomers">0</strong>
+        </div>
+
+        <div class="summary-row">
+            <span>Invoices</span>
+            <strong id="summaryInvoices">0</strong>
+        </div>
+
+        <div class="summary-row">
+            <span>Payments</span>
+            <strong id="summaryPayments">₹0</strong>
+        </div>
+
+    </section>
+
+
+    <div id="message" class="message"></div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="reports.js"></script>
+
+</body>
+</html>

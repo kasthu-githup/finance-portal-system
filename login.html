@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="45xLO-QfNqssnhwnuLWIxWStFCSGDX5ielgem8NI98k" />
+
+
+    <title>Finance Portal - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <!-- LEFT SIDE -->
+        <div class="login-info">
+
+            <div class="brand">
+                <span class="brand-icon">♜</span>
+                <span>azia finance</span>
+            </div>
+
+            <div class="info-content">
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Manage your income, expenses, customers,
+                    invoices and payments from one secure
+                    finance management portal.
+                </p>
+
+                <div class="feature-list">
+
+                    <div>
+                        <span>✓</span>
+                        <p>Real-time financial dashboard</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Income and expense tracking</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Customer and invoice management</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Payment monitoring</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="login-container">
+
+            <div class="login-card">
+
+                <div class="mobile-brand">
+                    <span class="brand-icon">♜</span>
+                    <span>azia finance</span>
+                </div>
+
+                <h2>Sign In</h2>
+
+                <p class="login-subtitle">
+                    Enter your email and password to continue.
+                </p>
+
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm">
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+                    <div class="form-options">
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                        <a
+                            href="#"
+                            class="forgot-password"
+                        >
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- SIGN IN -->
+                    <button
+                        type="submit"
+                        id="loginBtn"
+                        class="login-btn"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="message"
+                    class="message"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- DIVIDER -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <!-- GOOGLE -->
+                <button
+                    type="button"
+                    id="googleBtn"
+                    class="google-btn"
+                >
+                    <span class="google-icon">G</span>
+                    Continue with Google
+                </button>
+
+
+                <!-- SIGNUP -->
+                <p class="signup-text">
+
+                    Don't have an account?
+
+                    <a href="signup.html">
+                        Create Account
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="login.js"
+    ></script>
+
+</body>
+
+</html>

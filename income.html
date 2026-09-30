@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Invoice Management</title>
+
+  <link rel="stylesheet" href="invoice.css" />
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="header-left">
+        <div class="page-icon">🧾</div>
+
+        <div>
+          <h1>Invoice Management</h1>
+          <p>Create and manage your invoice records.</p>
+        </div>
+      </div>
+
+      <a href="index.html" class="dashboard-link">
+        ← Dashboard
+      </a>
+    </header>
+
+
+    <!-- Create / Edit Invoice -->
+    <section class="form-card">
+
+      <div class="section-header">
+        <h2 id="formTitle">Create Invoice</h2>
+        <p id="formDescription">
+          Create a new invoice for a customer.
+        </p>
+      </div>
+
+      <form id="invoiceForm">
+
+        <div class="form-grid">
+
+          <!-- Customer -->
+          <div class="form-group">
+            <label for="customer">Customer</label>
+
+            <select id="customer" required>
+              <option value="">Select Customer</option>
+            </select>
+          </div>
+
+
+          <!-- Invoice Number -->
+          <div class="form-group">
+            <label for="invoiceNumber">Invoice Number</label>
+
+            <input
+              type="text"
+              id="invoiceNumber"
+              placeholder="INV-001"
+              required
+            />
+          </div>
+
+
+          <!-- Amount -->
+          <div class="form-group">
+            <label for="amount">Amount</label>
+
+            <input
+              type="number"
+              id="amount"
+              min="0"
+              step="0.01"
+              placeholder="0.00"
+              required
+            />
+          </div>
+
+
+          <!-- Invoice Date -->
+          <div class="form-group">
+            <label for="invoiceDate">Invoice Date</label>
+
+            <input
+              type="date"
+              id="invoiceDate"
+              required
+            />
+          </div>
+
+
+          <!-- Status -->
+          <div class="form-group">
+            <label for="status">Status</label>
+
+            <select id="status" required>
+              <option value="pending">Pending</option>
+              <option value="partial">Partial</option>
+              <option value="paid">Paid</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="form-actions">
+
+          <button
+            type="submit"
+            id="submitBtn"
+            class="primary-btn"
+          >
+            ＋ Create Invoice
+          </button>
+
+          <button
+            type="button"
+            id="clearBtn"
+            class="secondary-btn"
+          >
+            Clear
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- Invoice Records -->
+    <section class="records-card">
+
+      <div class="records-header">
+
+        <div>
+          <h2>Invoice Records</h2>
+
+          <p>
+            All invoice records from PostgreSQL database.
+          </p>
+        </div>
+
+        <div class="record-count">
+          <span id="totalInvoices">0</span>
+          <small>Total Invoices</small>
+        </div>
+
+      </div>
+
+
+      <!-- Table -->
+      <div class="table-container">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Invoice No.</th>
+              <th>Customer</th>
+              <th>Amount</th>
+              <th>Paid</th>
+              <th>Balance</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="invoiceTableBody">
+            <tr>
+              <td colspan="9" class="loading-cell">
+                Loading invoices...
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- Authentication -->
+  <script src="auth.js"></script>
+  <script src="auth-ui.js"></script>
+
+  <!-- Invoice JavaScript -->
+  <script src="invoice.js"></script>
+
+</body>
+</html>

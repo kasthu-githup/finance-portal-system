@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finance Portal - Settings</title>
+
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="page-header">
+
+        <div>
+            <span class="page-icon">⚙️</span>
+            <h1>Settings</h1>
+            <p>Manage your account and portal settings.</p>
+        </div>
+
+        <a href="index.html" class="dashboard-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- PROFILE -->
+    <section class="card">
+
+        <h2>Profile Information</h2>
+        <p class="section-text">
+            Your currently logged-in account details.
+        </p>
+
+        <div class="profile-grid">
+
+            <div class="info-box">
+                <span>Name</span>
+                <strong id="userName">User</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Email</span>
+                <strong id="userEmail">-</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Role</span>
+                <strong id="userRole">Admin</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Account Status</span>
+                <strong class="online">
+                    Active
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SYSTEM STATUS -->
+    <section class="card">
+
+        <h2>System Status</h2>
+
+        <div class="status-row">
+
+            <div>
+                <strong>Backend API</strong>
+                <small>
+                    Node.js + Express
+                </small>
+            </div>
+
+            <span class="status-badge online-badge">
+                Online
+            </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+            <div>
+                <strong>Database</strong>
+                <small>
+                    Neon PostgreSQL
+                </small>
+            </div>
+
+            <span
+                id="databaseStatus"
+                class="status-badge"
+            >
+                Checking...
+            </span>
+
+        </div>
+
+
+        <div class="status-row">
+
+            <div>
+                <strong>Authentication</strong>
+                <small>
+                    JWT Authentication
+                </small>
+            </div>
+
+            <span class="status-badge online-badge">
+                Active
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACCOUNT ACTIONS -->
+    <section class="card">
+
+        <h2>Account Actions</h2>
+
+        <p class="section-text">
+            Manage your current portal session.
+        </p>
+
+        <button
+            type="button"
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </section>
+
+
+    <div
+        id="message"
+        class="message"
+        role="alert"
+    ></div>
+
+</div>
+
+
+<script src="auth.js"></script>
+<script src="settings.js"></script>
+
+</body>
+</html>
